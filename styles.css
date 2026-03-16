@@ -2,7 +2,7 @@
   --page-bg: #efefef;
   --text-strong: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.87);
-  --card-radius: 30px;
+  --card-radius: 26px;
   --shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
 }
 
@@ -20,69 +20,77 @@ body {
 
 .app-shell {
   padding: 0;
-  max-width: 760px;
+  width: min(100%, 1200px);
 }
 
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   background: #fff;
-  padding: 22px 24px;
+  padding: clamp(12px, 3vw, 22px) clamp(14px, 3vw, 24px);
   border-bottom: 1px solid #d6d6d6;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: clamp(7px, 1.4vw, 14px);
   font-weight: 700;
+  min-width: 0;
 }
 
 .brand-logo {
-  font-size: 2rem;
+  font-size: clamp(1.15rem, 4vw, 2rem);
   color: #1d8ee6;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .brand-divider {
   color: #9aa4b2;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
 .brand-text {
-  font-size: 2rem;
+  font-size: clamp(1.05rem, 3.6vw, 2rem);
   color: #374151;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .logout {
   border: 0;
   background: transparent;
-  font-size: 2rem;
+  font-size: clamp(0.9rem, 2.8vw, 1.35rem);
   font-weight: 600;
   color: #111827;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
+  margin: 0;
 }
 
 .logout-icon {
-  font-size: 2.2rem;
+  font-size: clamp(1rem, 3.2vw, 1.4rem);
 }
 
 .card-grid {
-  padding: 20px;
+  padding: clamp(10px, 2vw, 20px);
+}
+
+.card-grid .cell {
+  margin-bottom: clamp(10px, 2vw, 16px);
 }
 
 .module-card {
   display: block;
   text-decoration: none;
   color: var(--text-strong);
-  min-height: 360px;
+  min-height: clamp(190px, 28vw, 300px);
   border-radius: var(--card-radius);
-  padding: 28px;
+  padding: clamp(18px, 2.6vw, 28px);
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
@@ -95,34 +103,34 @@ body {
 }
 
 .icon-wrap {
-  width: 86px;
-  height: 86px;
-  border-radius: 24px;
+  width: clamp(56px, 8vw, 86px);
+  height: clamp(56px, 8vw, 86px);
+  border-radius: clamp(15px, 2vw, 24px);
   background: rgba(255, 255, 255, 0.16);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.8rem;
-  margin-bottom: 28px;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  margin-bottom: clamp(14px, 3vw, 28px);
 }
 
 .module-card h2 {
   margin: 0;
-  font-size: clamp(2.2rem, 4.4vw, 3rem);
+  font-size: clamp(1.25rem, 3vw, 2.2rem);
   line-height: 1.2;
 }
 
 .module-card p {
   margin: 8px 0 0;
-  font-size: clamp(1.7rem, 3vw, 2.1rem);
+  font-size: clamp(0.9rem, 2vw, 1.35rem);
   color: var(--text-muted);
 }
 
 .arrow {
   position: absolute;
-  right: 26px;
-  bottom: 20px;
-  font-size: 4rem;
+  right: 18px;
+  bottom: 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -149,11 +157,11 @@ body {
 }
 
 .form-demo {
-  padding: 16px 20px 28px;
+  padding: clamp(12px, 2vw, 16px) clamp(10px, 2vw, 20px) 28px;
 }
 
 .form-demo h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #111827;
   margin-bottom: 14px;
 }
@@ -177,25 +185,13 @@ select {
   font-size: 13px;
 }
 
-@media (max-width: 640px) {
-  .module-card {
-    min-height: 220px;
-  }
-
-  .module-card h2 {
-    font-size: 2rem;
-  }
-
-  .module-card p {
-    font-size: 1.3rem;
-  }
-
-  .brand-logo,
+@media (max-width: 420px) {
+  .brand-divider,
   .brand-text {
-    font-size: 1.7rem;
+    display: none;
   }
 
-  .logout {
-    font-size: 1.3rem;
+  .module-card {
+    min-height: 180px;
   }
 }
