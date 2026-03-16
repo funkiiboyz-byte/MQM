@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEGAPREP CMS Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="grid-container fluid app-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="MEGAPREP CMS">
+          <span class="brand-logo">MEGAPREP</span>
+          <span class="brand-divider">|</span>
+          <span class="brand-text">CMS</span>
+        </div>
+        <button class="logout" aria-label="Logout">
+          <span class="logout-icon">↪</span>
+          Logout
+        </button>
+      </header>
+
+      <section class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 card-grid" aria-label="Dashboard cards">
+        <article class="cell">
+          <a class="module-card blue" href="#" aria-label="Create Exam">
+            <div class="icon-wrap">+</div>
+            <h2>Create Exam</h2>
+            <p>Setup new papers</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+
+        <article class="cell">
+          <a class="module-card green" href="#" aria-label="Handle Exams">
+            <div class="icon-wrap">✎</div>
+            <h2>Handle Exams</h2>
+            <p>Manage active tests</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+
+        <article class="cell">
+          <a class="module-card orange" href="#" aria-label="Question Bank">
+            <div class="icon-wrap">◍</div>
+            <h2>Question Bank</h2>
+            <p>Repository access</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+
+        <article class="cell">
+          <a class="module-card purple" href="#" aria-label="Students">
+            <div class="icon-wrap">◌◌</div>
+            <h2>Students</h2>
+            <p>User management</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+
+        <article class="cell">
+          <a class="module-card pink" href="#" aria-label="Analytics">
+            <div class="icon-wrap">⋮</div>
+            <h2>Analytics</h2>
+            <p>Performance reports</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+
+        <article class="cell">
+          <a class="module-card cyan" href="#" aria-label="Devices">
+            <div class="icon-wrap">⌨</div>
+            <h2>Devices</h2>
+            <p>Session security</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+
+        <article class="cell">
+          <a class="module-card slate" href="#" aria-label="Password">
+            <div class="icon-wrap">⌁</div>
+            <h2>Password</h2>
+            <p>Update credentials</p>
+            <span class="arrow">›</span>
+          </a>
+        </article>
+      </section>
+
+      <section class="form-demo">
+        <h3>Foundation-ready form styling</h3>
+        <label>
+          Exam Name
+          <input type="text" placeholder="Quarterly Assessment" />
+        </label>
+        <label>
+          Description
+          <textarea rows="3" placeholder="Add short details"></textarea>
+        </label>
+        <label>
+          Category
+          <select>
+            <option>Mathematics</option>
+            <option>Science</option>
+            <option>Language</option>
+          </select>
+        </label>
+      </section>
+    </main>
+  </body>
+</html>
