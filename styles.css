@@ -1,0 +1,201 @@
+:root {
+  --page-bg: #efefef;
+  --text-strong: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.87);
+  --card-radius: 30px;
+  --shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: #101828;
+}
+
+.app-shell {
+  padding: 0;
+  max-width: 760px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 22px 24px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+}
+
+.brand-logo {
+  font-size: 2rem;
+  color: #1d8ee6;
+  letter-spacing: 0.04em;
+}
+
+.brand-divider {
+  color: #9aa4b2;
+  font-size: 1.8rem;
+}
+
+.brand-text {
+  font-size: 2rem;
+  color: #374151;
+  letter-spacing: 0.08em;
+}
+
+.logout {
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logout-icon {
+  font-size: 2.2rem;
+}
+
+.card-grid {
+  padding: 20px;
+}
+
+.module-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text-strong);
+  min-height: 360px;
+  border-radius: var(--card-radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.26);
+}
+
+.icon-wrap {
+  width: 86px;
+  height: 86px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  margin-bottom: 28px;
+}
+
+.module-card h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.4vw, 3rem);
+  line-height: 1.2;
+}
+
+.module-card p {
+  margin: 8px 0 0;
+  font-size: clamp(1.7rem, 3vw, 2.1rem);
+  color: var(--text-muted);
+}
+
+.arrow {
+  position: absolute;
+  right: 26px;
+  bottom: 20px;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.blue {
+  background: linear-gradient(135deg, #3268ee, #2047c9);
+}
+.green {
+  background: linear-gradient(135deg, #1ecf99, #09a66e);
+}
+.orange {
+  background: linear-gradient(135deg, #f7af00, #e88b00);
+}
+.purple {
+  background: linear-gradient(135deg, #8a5cf6, #6f2de1);
+}
+.pink {
+  background: linear-gradient(135deg, #f2487e, #bf0c4a);
+}
+.cyan {
+  background: linear-gradient(135deg, #24aee9, #1085c7);
+}
+.slate {
+  background: linear-gradient(135deg, #4b5d78, #222f47);
+}
+
+.form-demo {
+  padding: 16px 20px 28px;
+}
+
+.form-demo h3 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.form-demo label {
+  display: block;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .module-card {
+    min-height: 220px;
+  }
+
+  .module-card h2 {
+    font-size: 2rem;
+  }
+
+  .module-card p {
+    font-size: 1.3rem;
+  }
+
+  .brand-logo,
+  .brand-text {
+    font-size: 1.7rem;
+  }
+
+  .logout {
+    font-size: 1.3rem;
+  }
+}
