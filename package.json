@@ -1,0 +1,25 @@
+{
+  "name": "megaprep-exam-question-maker",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "build": "npm run build --workspace client",
+    "test": "npm run test --workspace server",
+    "lint": "eslint .",
+    "typecheck": "npm run typecheck --workspace server && npm run typecheck --workspace client",
+    "check:all": "npm run lint && npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "eslint": "^9.21.0",
+    "@eslint/js": "^9.21.0",
+    "globals": "^15.15.0",
+    "typescript": "^5.8.2",
+    "@types/node": "^22.13.10"
+  }
+}
